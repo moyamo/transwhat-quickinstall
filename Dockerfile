@@ -7,11 +7,11 @@ RUN dnf install zlib-devel libjpeg-devel python-devel python-pip git gcc redhat-
 	    git worktree add /opt/transwhat &&\
 	    cd .. &&\
 	    cd yowsup &&\
-	    git worktree add /opt/transwhat/yowsup &&\
+	    cp yowsup /opt/transwhat/yowsup &&\
 	    cd .. &&\
 	    rm -r transwhat &&\
 	    rm -r yowsup &&\
 	    cd /opt/transwhat &&\
-	    rm .git .gitignore yowsup/.git yowsup/.gitignore &&\
+	    rm .git .gitignore&&\
 	    dnf remove python-devel git gcc gcc-c++ redhat-rpm-config -y &&\
 	    dnf clean all -y

@@ -40,5 +40,5 @@ docker run -d \
 	--net="host" \
 	-v /opt/prosody:/etc/prosody \
 	-v /var/log/prosody:/var/log/prosody \
-	prosody/prosody:0.9
+	prosody/prosody:latest prosodyctl start
 

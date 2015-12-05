@@ -72,7 +72,15 @@ allow_registration = false;
 --	certificate = "certs/localhost.crt";
 --	}
 -- This allows clients to connect to localhost. No harm in it.
+--
+Component "{{{{transwhathost}}}}"
+    component_secret = "whatsappsucks"
+    component_ports = { 5221 }
+    component_interface = "127.0.0.1"
+
 VirtualHost "localhost"
+
+daemonize = false
  
 -- Section for example.com
 -- (replace example.com with your domain name)
@@ -88,8 +96,3 @@ VirtualHost "{{{{prosodyhost}}}}"
 
 --	enabled = false -- This will disable the host, preserving the config, but denying connections
 
--- Set up a MUC (multi-user chat) room server on conference.example.com:
-Component "{{{{transwhathost}}}}"
-    component_secret = "whatsappsucks"
-    component_ports = { 5221 }
-    component_interface = "127.0.0.1"
